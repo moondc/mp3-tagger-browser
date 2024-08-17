@@ -17,6 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
+            "baseHref": "/mp3-tagger/",
             "outputPath": "dist/mp3-tagger-browser",
             "index": "src/index.html",
             "browser": "src/main.ts",
