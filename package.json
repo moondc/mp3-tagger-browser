@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "start:vm": "ng serve --host 0.0.0.0",
+    "start:vm": "ng serve --host 0.0.0.0 --port 4201",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
@@ -21,6 +21,7 @@
     "@angular/platform-browser": "^18.1.0",
     "@angular/platform-browser-dynamic": "^18.1.0",
     "@angular/router": "^18.1.0",
+    "dashboard-themes": "^0.0.2",
     "mp3tag.js": "^3.11.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",

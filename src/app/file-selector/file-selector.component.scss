@@ -4,10 +4,14 @@ $lightBlue: #EEF5F5;
 .dropzone {
     padding: 2rem;
     text-align: center;
-    background: $lightBlue;
-    border: 2px dashed $borderlightBlue;
+    background: var(--sys-primary-container);
+    border: 2px dashed var(--sys-primary);
     position: relative;
     margin: auto;
+}
+
+.file-type-text {
+    color: var(--sys-primary);
 }
 
 .input {
@@ -38,15 +42,15 @@ $lightBlue: #EEF5F5;
 }
 
 .list_item_icon:hover {
-    color: red
+    color: var(--sys-error)
 }
 
 .clean {
-    background-color: lightgreen !important;
+    background-color: var(--sys-surface-container) !important;
 }
 
 .dirty {
-    background-color: lightcoral !important;
+    background-color: var(--sys-error-container) !important;
 }
 
 .button_container {

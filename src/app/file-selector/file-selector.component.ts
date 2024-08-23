@@ -5,11 +5,12 @@ import { MatButtonModule } from '@angular/material/button';
 import { MetadataService } from '../metadata.service';
 import { CommonModule } from '@angular/common';
 import { MetadataStore } from '../id3.service';
+import { MatCardModule } from '@angular/material/card';
 
 @Component({
   selector: 'app-file-selector',
   standalone: true,
-  imports: [MatListModule, MatIconModule, MatButtonModule, CommonModule],
+  imports: [MatListModule, MatIconModule, MatButtonModule, CommonModule, MatCardModule],
   encapsulation: ViewEncapsulation.None,
   templateUrl: './file-selector.component.html',
   styleUrl: './file-selector.component.scss'

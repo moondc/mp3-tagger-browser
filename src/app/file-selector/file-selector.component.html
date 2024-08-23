@@ -1,27 +1,30 @@
 <div>
     <div class="dropzone">
         <input class="input" type="file" accept=".mp3" multiple id="filedrop" (input)="onInput($event)" />
-        <div>drag .mp3's here</div>
+        <div class="file-type-text">click or drag .mp3's here</div>
     </div>
     <div class="preview">
         <mat-selection-list class="list_container">
-            @for(metadata of metadataService.metadataStore; track metadata){
-            <mat-list-item (click)="onListItemClick(metadata)" [ngClass]="metadata.dirty? 'dirty':'clean'">
-                <div class="list_item">
-                    <div>{{metadata.currentFilename}}</div>
-                    <mat-icon (click)="onIconClick($event, metadata)" class="list_item_icon"
-                        fontIcon="close"></mat-icon>
-                </div>
-            </mat-list-item>
-            } @empty {
-            <div> No files currently selected</div>
-            }
+            <mat-card appearance="outlined">
+                <mat-card-content>
+                    @for(metadata of metadataService.metadataStore; track metadata){
+                    <mat-list-item (click)="onListItemClick(metadata)" [ngClass]="metadata.dirty? 'dirty':'clean'">
+                        <div class="list_item">
+                            <div>{{metadata.currentFilename}}</div>
+                            <mat-icon (click)="onIconClick($event, metadata)" class="list_item_icon"
+                                fontIcon="close"></mat-icon>
+                        </div>
+                    </mat-list-item>
+                    } @empty {
+                    <div> No files currently selected</div>
+                    }
+                </mat-card-content>
+            </mat-card>
         </mat-selection-list>
     </div>
     <div class="button_container">
-        <button [disabled]="getIsButtonDisabled()" mat-raised-button (click)="onSortClick()">Sort
+        <button [disabled]="getIsButtonDisabled()" mat-flat-button (click)="onSortClick()">Sort
             Lexicographically</button>
-        <button [disabled]="getIsButtonDisabled()" mat-raised-button (click)="onClearListClick()">Clear List</button>
-
+        <button [disabled]="getIsButtonDisabled()" mat-flat-button (click)="onClearListClick()">Clear List</button>
     </div>
 </div>

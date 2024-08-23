@@ -1,8 +1,14 @@
 .container {
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    gap: 1em;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    align-content: space-around;
+    padding: 1em 1em 1em 1em;
+    box-sizing: border-box;
+}
+
+.drawer-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-sizing: border-box;
 }

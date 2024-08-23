@@ -33,7 +33,7 @@
               }
             ],
             "styles": [
-              "@angular/material/prebuilt-themes/cyan-orange.css",
+              "dashboard-themes/artifacts/styles.css",
               "src/styles.scss"
             ],
             "scripts": []
