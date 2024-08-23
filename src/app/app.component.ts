@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { FileSelectorComponent } from './file-selector/file-selector.component';
 import { MetadataDisplayComponent } from './metadata-display/metadata-display.component';
